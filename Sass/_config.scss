@@ -1,0 +1,25 @@
+// resets
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    font-family: 'Wix Madefor Display', sans-serif;
+    box-sizing: border-box;
+}
+
+body,html{
+    position: relative;
+    height: 100%;
+}
+
+body{
+    background-color: #0d0d0b;
+}
+
+// mixins
+@mixin flex($gap,$flex-direction,$align-items,$justify-content){
+    display: flex;
+    gap: $gap;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}

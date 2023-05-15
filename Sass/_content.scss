@@ -1,0 +1,12 @@
+.content_main{
+    padding: .5rem;
+    @include flex(0,column,center,center);
+
+    h1{
+        font-size: 13rem;
+        margin-top: -2rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #f8f2ed;
+    }
+}
