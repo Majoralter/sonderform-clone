@@ -1,0 +1,40 @@
+nav{
+    position: absolute;
+    z-index: 2;
+    padding: 2rem;
+    background-color: #d5fca2;
+    right: 2rem;
+    bottom: 2rem;
+    height: 322px;
+    width: 322px;
+    border-radius: 1rem;
+    cursor: pointer;
+    transform-origin: right bottom;
+    clip-path: circle(10% at 90% 90%);
+    transition:  .7s ease;
+
+    &:hover{
+        clip-path: circle(12.5% at 86% 86%);
+        // clip-path: none;
+    }
+
+
+    .menu_absolute{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    @include flex(0,column,center,center);
+
+    span{
+        height: 2px;
+        width: 100%;
+        background-color: #0d0d0b;
+    }
+
+    span:nth-of-type(1){
+        transform: rotate(90deg);
+    }
+}
+}
