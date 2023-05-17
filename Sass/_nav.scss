@@ -11,11 +11,14 @@ nav{
     cursor: pointer;
     transform-origin: right bottom;
     clip-path: circle(10% at 90% 90%);
-    transition:  .7s ease;
+    transition: all .7s ease-in-out;
 
     &:hover{
         clip-path: circle(12.5% at 86% 86%);
-        // clip-path: none;
+    }
+
+    &.active{
+        clip-path: circle(150% at 90% 90%);
     }
 
 
@@ -28,13 +31,54 @@ nav{
     @include flex(0,column,center,center);
 
     span{
-        height: 2px;
+        height: 1.5px;
         width: 100%;
         background-color: #0d0d0b;
+        transition: transform .5s ease-in-out;
     }
 
     span:nth-of-type(1){
         transform: rotate(90deg);
+
+        &.active{
+        transform: rotate(45deg);
+        }
+    }
+
+    span:nth-of-type(2){
+        &.active{
+        transform: rotate(-45deg);
+        }
     }
 }
+
+ ul{
+    list-style-type: none;
+    @include flex(1rem,column,flex-start,flex-start);
+
+   li{
+    a{
+        text-decoration: none;
+        font-size: 2rem;
+        color: #0d0d0b;
+        opacity: 0;
+        transition: opacity .6s ease-in-out;
+
+        &:hover{
+            color: #0d0d0b82;
+        }
+
+        &.active{
+            opacity: 1;
+        }
+     }
+   }
+
+   li:first-of-type{
+    a{
+        color: #0d0d0b82;
+    }
+   }
+ }
+
 }

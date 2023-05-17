@@ -1,0 +1,11 @@
+.transition-page{
+    font-size: 2rem;
+    font-weight: 500;
+    background-color: #d5fca2;
+    position: absolute;
+    z-index: 3;
+    height: 100vh;
+    width: 100vw;
+    border-radius: 2rem;
+    @include flex(0,column,center,center);
+}

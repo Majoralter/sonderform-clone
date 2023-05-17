@@ -28,10 +28,13 @@ nav {
   cursor: pointer;
   transform-origin: right bottom;
   clip-path: circle(10% at 90% 90%);
-  transition: 0.7s ease;
+  transition: all 0.7s ease-in-out;
 }
 nav:hover {
   clip-path: circle(12.5% at 86% 86%);
+}
+nav.active {
+  clip-path: circle(150% at 90% 90%);
 }
 nav .menu_absolute {
   height: 30px;
@@ -46,12 +49,43 @@ nav .menu_absolute {
   justify-content: center;
 }
 nav .menu_absolute span {
-  height: 2px;
+  height: 1.5px;
   width: 100%;
   background-color: #0d0d0b;
+  transition: transform 0.5s ease-in-out;
 }
 nav .menu_absolute span:nth-of-type(1) {
   transform: rotate(90deg);
+}
+nav .menu_absolute span:nth-of-type(1).active {
+  transform: rotate(45deg);
+}
+nav .menu_absolute span:nth-of-type(2).active {
+  transform: rotate(-45deg);
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+nav ul li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #0d0d0b;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+nav ul li a:hover {
+  color: rgba(13, 13, 11, 0.5098039216);
+}
+nav ul li a.active {
+  opacity: 1;
+}
+nav ul li:first-of-type a {
+  color: rgba(13, 13, 11, 0.5098039216);
 }
 
 .content_main {
@@ -108,6 +142,22 @@ nav .menu_absolute span:nth-of-type(1) {
   height: 1px;
   border-radius: 0;
   background-color: #fff;
+}
+
+.transition-page {
+  font-size: 2rem;
+  font-weight: 500;
+  background-color: #d5fca2;
+  position: absolute;
+  z-index: 3;
+  height: 100vh;
+  width: 100vw;
+  border-radius: 2rem;
+  display: flex;
+  gap: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=main.css.map */
