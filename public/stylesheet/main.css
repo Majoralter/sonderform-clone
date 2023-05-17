@@ -33,6 +33,9 @@ nav {
 nav:hover {
   clip-path: circle(12.5% at 86% 86%);
 }
+nav.active {
+  clip-path: circle(150% at 90% 90%);
+}
 nav .menu_absolute {
   height: 30px;
   width: 30px;
